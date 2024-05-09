@@ -30,10 +30,15 @@ h1 {
     font-size: 2rem;
     line-height: 1;
     margin-bottom: .75em;
+    /*transform: translateX(100%);
+    opacity: 0;*/
+}
+/*
+.profile {
     transform: translateX(100%);
     opacity: 0;
 }
-
+*/
 h2 {
     font-size: 2rem;
     line-height: 1;
@@ -282,10 +287,7 @@ footer {
     background-color: var(--gray);
 }
 
-.profile {
-    transform: translateX(100%);
-    opacity: 0;
-}
+
 
 .btn:hover,
 .hero_btn:hover {
