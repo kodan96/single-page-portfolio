@@ -32,15 +32,15 @@
                     </div>
                     <picture>
                         <source srcset="images/image-profile-desktop.webp" media="(min-width: 1200px)" type="image/webp" />
-                        <source srcset="images/image-profile-tablet.webp" media="(min-width: 768px)" type="image/webp" />
-                        <img src="images/image-profile-mobile.webp" media="(max-width: 767px)" type="image/webp" alt="Adam Keyes, front-end developer" />
+                        <source srcset="images/image-profile-tablet.webp" media="(min-width: 750px)" type="image/webp" />
+                        <img src="images/image-profile-mobile.webp" media="(max-width: 749px)" type="image/webp" alt="Adam Keyes, front-end developer" class="profile"/>
                     </picture>
                     
                 </div>
                 <div class="hero_txt">
-                    <h1>Nice to meet you! I'm <span class="hero_txt--underline">Adam Keyes</span>.</h1>
-                    <p>Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
-                    <a href="#" role="button" class="btn">CONTACT ME</a>
+                    <h1 class="header">Nice to meet you! I'm <span class="hero_txt--underline">Adam Keyes</span>.</h1>
+                    <p class="split">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
+                    <a href="#" role="button" class="hero_btn">CONTACT ME</a>
                 </div>
             </section>
             <hr>
@@ -90,8 +90,8 @@
                         <div class="project_img">
                             <picture>
                                 
-                                <source media="(min-width:1200px )" srcset="images/thumbnail-project-1-large.webp">
-                                <img src="images/thumbnail-project-1-small.webp" alt="Design portfolio Project">
+                                <source media="(min-width:1200px )" srcset="images/thumbnail-project-1-large.webp" class="thumb">
+                                <img src="images/thumbnail-project-1-small.webp" alt="Design portfolio Project" class="thumb">
                             </picture>
                         </div>
                         <div class="project_content">
@@ -101,8 +101,8 @@
                                 <span class="project_content--tool">CSS</span>
                             </div>
                             <div>
-                                <a href="#" class="btn">VIEW PROJECT</a>
-                                <a href="#" class="btn">VIEW CODE</a>
+                                <a href="#" class="btn view">VIEW PROJECT</a>
+                                <a href="#" class="btn code">VIEW CODE</a>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                             <picture>
                                 
                                 <source media="(min-width:1200px )" srcset="images/thumbnail-project-2-large.webp">
-                                <img media="(max-width:1199px )" srcset="images/thumbnail-project-2-small.webp" alt="E-learning project">
+                                <img media="(max-width:1199px )" srcset="images/thumbnail-project-2-small.webp" alt="E-learning project" class="thumb">
                             </picture>
                         </div>
                         <div class="project_content">
@@ -121,8 +121,8 @@
                                 <span class="project_content--tool">CSS</span>
                             </div>
                             <div>
-                                <a href="#" class="btn">VIEW PROJECT</a>
-                                <a href="#" class="btn">VIEW CODE</a>
+                                <a href="#" class="btn view">VIEW PROJECT</a>
+                                <a href="#" class="btn code">VIEW CODE</a>
                             </div>
                         </div>
                     </div>
@@ -142,8 +142,8 @@
                                 <span class="project_content--tool">JAVASCRIPT</span>
                             </div>
                             <div>
-                                <a href="#" class="btn">VIEW PROJECT</a>
-                                <a href="#" class="btn">VIEW CODE</a>
+                                <a href="#" class="btn view">VIEW PROJECT</a>
+                                <a href="#" class="btn code">VIEW CODE</a>
                             </div>
                         </div>
                     </div>
@@ -163,8 +163,8 @@
                                 <span class="project_content--tool">JAVASCRIPT</span>
                             </div>
                             <div>
-                                <a href="#" class="btn">VIEW PROJECT</a>
-                                <a href="#" class="btn">VIEW CODE</a>
+                                <a href="#" class="btn view">VIEW PROJECT</a>
+                                <a href="#" class="btn code">VIEW CODE</a>
                             </div>
                         </div>
                     </div>
@@ -184,8 +184,8 @@
                                 <span class="project_content--tool">JAVASCRIPT</span>
                             </div>
                             <div>
-                                <a href="#" class="btn">VIEW PROJECT</a>
-                                <a href="#" class="btn">VIEW CODE</a>
+                                <a href="#" class="btn view">VIEW PROJECT</a>
+                                <a href="#" class="btn code">VIEW CODE</a>
                             </div>
                         </div>
                     </div>
@@ -205,8 +205,8 @@
                                 <span class="project_content--tool">JAVASCRIPT</span>
                             </div>
                             <div>
-                                <a href="#" class="btn">VIEW PROJECT</a>
-                                <a href="#" class="btn">VIEW CODE</a>
+                                <a href="#" class="btn view">VIEW PROJECT</a>
+                                <a href="#" class="btn code">VIEW CODE</a>
                             </div>
                         </div>
                     </div>
@@ -223,8 +223,10 @@
                     <form action="">
                         <input type="text" name="name" id="name" required aria-label="Please enter your name" placeholder="NAME">
                         <input type="email" name="email" id="email" required aria-label="Please enter your email address" placeholder="EMAIL">
-                        <textarea name="message" id="message" required aria-label="Please enter your message" placeholder="MESSAGE" rows="6">MESSAGE</textarea>
-                        <a href="#" class="btn">SEND MESSAGE</a>
+                        
+                        <textarea name="message" id="message" required aria-label="Please enter your message" placeholder="MESSAGE" rows="6"></textarea>
+                        <a href="#" class="hero_btn" id="submit">SEND MESSAGE</a>
+                        <p class="error"></p>
                     </form>
                     <div >
                         <img src="images/pattern-rings.svg" alt="" class="form_bg">
@@ -243,5 +245,11 @@
             <a href="#"><img src="images/icon-twitter.svg" alt="My Twitter Profile"></a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
